@@ -1,0 +1,253 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+}
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 96px 24px 80px;
+}
+
+.container h1 {
+  font-size: 36px;
+  line-height: 40px;
+  letter-spacing: -0.53px;
+  margin-bottom: 24px;
+}
+
+.desc {
+  color: var(--color-text-secondary);
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: -0.44px;
+}
+
+.divider {
+  margin: 32px 0 56px;
+  border-top: 1px solid var(--color-border);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  height: 24px;
+  border-radius: 9999px;
+  background: var(--color-accent-indigo-bg);
+  color: var(--color-accent-indigo);
+  padding: 0 12px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.headRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.headRow h2 {
+  font-size: 30px;
+  line-height: 36px;
+  letter-spacing: -0.35px;
+  margin-bottom: 16px;
+}
+
+.headRow p {
+  max-width: 656px;
+  color: var(--color-text-secondary);
+  font-size: 18px;
+  line-height: 29.25px;
+  letter-spacing: -0.44px;
+}
+
+.actionBtn {
+  height: 52px;
+  border-radius: 16px;
+  padding: 0 32px;
+  background: var(--color-primary);
+  color: #fff;
+  box-shadow: var(--shadow-lg);
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.15px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 48px;
+}
+
+.summaryCard,
+.mappingCard {
+  border-radius: 32px;
+  border: 1px solid var(--color-border);
+  background: #fff;
+  padding: 40px;
+}
+
+.summaryCard {
+  border-left: 6px solid var(--color-accent-indigo);
+}
+
+.summaryCard header,
+.mappingCard header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.summaryTitle,
+.mappingTitle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.summaryTitle img,
+.mappingTitle img {
+  width: 32px;
+  height: 32px;
+}
+
+.summaryCard h3,
+.mappingCard h3 {
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: -0.44px;
+}
+
+.summaryTitle p {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.3px;
+  color: var(--color-text-muted);
+}
+
+.summaryCard header span,
+.mappingCard header span {
+  height: 23px;
+  border-radius: 8px;
+  background: var(--color-accent-indigo-bg);
+  color: var(--color-accent-indigo);
+  font-size: 10px;
+  line-height: 23px;
+  padding: 0 8px;
+  font-weight: 700;
+}
+
+.mappingCard header span {
+  background: var(--color-bg-muted);
+  color: var(--color-text-muted);
+}
+
+.rows {
+  display: grid;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 16px;
+  border-bottom: 1px solid var(--color-bg-subtle);
+  padding-bottom: 12px;
+}
+
+.row span {
+  font-size: 12px;
+  line-height: 19.5px;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+.row strong {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.15px;
+  font-weight: 500;
+  color: var(--color-text-body);
+}
+
+.summaryCard footer {
+  background: rgba(238, 242, 255, 0.3);
+  border: 1px solid rgba(224, 231, 255, 0.3);
+  border-radius: 16px;
+  padding: 16px;
+  color: var(--color-accent-indigo);
+  font-size: 11px;
+  line-height: 17.875px;
+}
+
+.fields {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.fieldItem p {
+  font-size: 10px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  letter-spacing: 1.1px;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.fieldItem div {
+  min-height: 50px;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  background: rgba(249, 250, 251, 0.5);
+  color: var(--color-text-muted);
+  padding: 15px 20px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.mappingHint {
+  text-align: center;
+  font-size: 10px;
+  line-height: 15px;
+  letter-spacing: 2.1px;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+}
+
+@media (max-width: 920px) {
+  .container {
+    padding: 40px 16px;
+  }
+
+  .headRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .summaryCard,
+  .mappingCard {
+    padding: 24px;
+  }
+}

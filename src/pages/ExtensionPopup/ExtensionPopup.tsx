@@ -1,116 +1,71 @@
-import { Link } from 'react-router-dom';
+import { Footer } from '../../components/Footer/Footer';
+import { Header } from '../../components/Header/Header';
 import { ASSETS } from '../../assets/constants';
 import styles from './ExtensionPopup.module.css';
 
 export function ExtensionPopup() {
   return (
-    <div className={styles.wrapper}>
     <div className={styles.page}>
-      <header className={styles.header}>
-        <div className={styles.headerRow}>
-          <Link to="/" className={styles.brand}>
-            <img src={ASSETS.logoPopup} alt="" className={styles.logo} />
-            <div className={styles.brandText}>
-              <h2>好运</h2>
-              <p>求职好运从现在开始</p>
-            </div>
-          </Link>
-          <div className={styles.statusBadge}>
-            <span className={styles.statusDot} />
-            <span className={styles.statusText}>运行中</span>
-          </div>
-        </div>
-      </header>
+      <Header activeTab="preview" />
 
-      <div className={styles.content}>
-        <div className={styles.resumeCard}>
-          <div className={styles.resumeCardHeader}>
-            <div className={styles.resumeCardBrand}>
-              <div className={styles.resumeIcon}>
-                <img src={ASSETS.popupDoc} alt="" />
+      <main className={styles.main}>
+        <section className={styles.hero}>
+          <h1>插件遥控器预览</h1>
+          <p>在网页侧边或顶部召唤“好运”插件，极简视觉风格与网页端保持高度一致，助您在任何招聘网站都能一键好运。</p>
+
+          <div className={styles.deviceWrap}>
+            <div className={styles.notch} />
+            <div className={styles.device}>
+              <div className={styles.popupHeader}>
+                <div className={styles.brandRow}>
+                  <img src={ASSETS.logoPopup} alt="好运" className={styles.logo} />
+                  <div>
+                    <h2>好运</h2>
+                    <p>求职好运从现在开始</p>
+                  </div>
+                </div>
+                <span className={styles.running}><span />运行中</span>
               </div>
-              <div>
-                <p className={styles.resumeTitle}>产品经理版简历</p>
-                <p className={styles.resumeDate}>更新于 2024.03.10</p>
+
+              <div className={styles.popupBody}>
+                <div className={styles.emptyCard}>
+                  <div className={styles.emptyIcon}>📄</div>
+                  <h3>暂无简历数据</h3>
+                  <p>上传后将自动提取核心字段并展示在这里</p>
+                  <button type="button">去上传</button>
+                </div>
+
+                <div className={styles.notice}>
+                  <div className={styles.noticeIcon}>◎</div>
+                  <div>
+                    <strong>已识别到申请表单</strong>
+                    <p>发现 12 个可填入字段</p>
+                  </div>
+                </div>
+
+                <button type="button" className={styles.primaryAction}>⚡ 立即开始自动填写</button>
+                <div className={styles.rowActions}>
+                  <button type="button">切换简历</button>
+                  <button type="button">完整页面 ↗</button>
+                </div>
+              </div>
+
+              <div className={styles.popupFooter}>
+                <div className={styles.links}>
+                  <span>设置</span>
+                  <span>帮助</span>
+                  <span>管理简历库</span>
+                </div>
+                <div className={styles.account}>已登录：lucky@pm.com</div>
               </div>
             </div>
-            <span className={styles.coreTag}>核心</span>
           </div>
-          <div className={styles.resumeCardBody}>
-            <div className={styles.resumeField}>
-              <span className={styles.resumeFieldLabel}>姓名</span>
-              <span className={styles.resumeFieldValue}>张好运</span>
-            </div>
-            <div className={styles.resumeField}>
-              <span className={styles.resumeFieldLabel}>学校</span>
-              <span className={styles.resumeFieldValue}>华中科技大学</span>
-            </div>
-            <div className={`${styles.resumeField} ${styles.resumeFieldFull}`}>
-              <span className={styles.resumeFieldLabel}>核心技能</span>
-              <span className={`${styles.resumeFieldValue} ${styles.resumeFieldValueMuted}`}>
-                数据分析、Axure、需求拆解...
-              </span>
-            </div>
-          </div>
-        </div>
 
-        <div className={styles.formNotice}>
-          <div className={styles.formNoticeIcon}>
-            <img src={ASSETS.popupFormRecognized} alt="" />
-          </div>
-          <div>
-            <p className={styles.formNoticeTitle}>已识别到申请表单</p>
-            <p className={styles.formNoticeSub}>发现 12 个可填入字段</p>
-          </div>
-        </div>
+          <p className={styles.sizeText}>尺寸演示: 360 x 560 (Chrome Extension Popup 标准)</p>
+        </section>
+      </main>
 
-        <div className={styles.actions}>
-          <button type="button" className={styles.primaryBtn}>
-            <img src={ASSETS.popupLightning} alt="" />
-            立即开始自动填写
-          </button>
-          <div className={styles.secondaryRow}>
-            <button type="button" className={styles.secondaryBtn}>
-              <img src={ASSETS.popupSwitch} alt="" />
-              切换简历
-            </button>
-            <button type="button" className={styles.secondaryBtn}>
-              <img src={ASSETS.popupFullPage} alt="" />
-              完整页面
-              <img src={ASSETS.popupExternal} alt="" />
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <footer className={styles.footer}>
-        <div className={styles.footerLinks}>
-          <div className={styles.footerLinkGroup}>
-            <a href="#" className={styles.footerLink}>
-              <img src={ASSETS.popupSettings} alt="" />
-              设置
-            </a>
-            <a href="#" className={styles.footerLink}>
-              <img src={ASSETS.popupHelp} alt="" />
-              帮助
-            </a>
-          </div>
-          <Link to="/" className={styles.footerLink}>
-            管理简历库
-            <img src={ASSETS.popupArrow} alt="" />
-          </Link>
-        </div>
-        <div className={styles.userBar}>
-          <div className={styles.userInfo}>
-            <div className={styles.userAvatar}>
-              <img src={ASSETS.popupUser} alt="" />
-            </div>
-            <span className={styles.userEmail}>已登录：lucky@pm.com</span>
-          </div>
-          <span className={styles.vipBadge}>VIP 剩余 22 天</span>
-        </div>
-      </footer>
-    </div>
+      <Footer />
     </div>
   );
 }

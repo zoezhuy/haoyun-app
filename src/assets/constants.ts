@@ -1,30 +1,13 @@
-/**
- * Image asset URLs from Figma (expire after ~7 days).
- * For production, download and host these in /public or your CDN.
- */
 export const ASSETS = {
-  logo: 'https://www.figma.com/api/mcp/asset/22f179d5-c2a3-4ffb-ac05-0e6b7ec14ccf',
-  logoPopup: 'https://www.figma.com/api/mcp/asset/d2f1d479-647d-4436-814b-0c4964dc1bee',
-  logoLogin: 'https://www.figma.com/api/mcp/asset/a7cb4ea8-1e0d-4a3f-858d-729b67e9b768',
-  iconArrowUp: 'https://www.figma.com/api/mcp/asset/23bf5de1-d4f3-49d3-99de-8ef95ad91ec0',
-  iconIn: 'https://www.figma.com/api/mcp/asset/d012b784-5ee8-489f-8c3d-ffa6ec1e6fbe',
-  iconUpload: 'https://www.figma.com/api/mcp/asset/b3da5a95-0042-4841-aee4-b61929bf4f0f',
-  iconCheck: 'https://www.figma.com/api/mcp/asset/418e604e-f445-4441-a562-e6d37d338455',
-  iconSparkle: 'https://www.figma.com/api/mcp/asset/8f5ec64e-0278-4090-bd9d-1bb676f714b7',
-  iconUploadSmall: 'https://www.figma.com/api/mcp/asset/db2c67d8-085d-4cfc-bed3-e0d027bb6d8e',
-  iconSparkleSmall: 'https://www.figma.com/api/mcp/asset/9a952b2c-d704-427e-a2fe-a88097164226',
-  iconForm: 'https://www.figma.com/api/mcp/asset/98fbb051-b029-48bc-97dc-731bf4784ead',
-  iconBack: 'https://www.figma.com/api/mcp/asset/5d73cb8f-34ef-407e-983b-d8c505963eb3',
-  iconSubmitArrow: 'https://www.figma.com/api/mcp/asset/510537be-276d-4d9e-b766-ea2173abcd2d',
-  /* Extension popup assets */
-  popupDoc: 'https://www.figma.com/api/mcp/asset/3a0e563d-03ff-441a-aa0e-7f023dd57db7',
-  popupFormRecognized: 'https://www.figma.com/api/mcp/asset/804ba4ef-a281-4af8-a768-cebc977ed7a6',
-  popupLightning: 'https://www.figma.com/api/mcp/asset/6de66ba1-c509-4299-9270-bebfc74f7067',
-  popupSwitch: 'https://www.figma.com/api/mcp/asset/f79e87d7-3c0e-40f0-867d-167b41eac308',
-  popupFullPage: 'https://www.figma.com/api/mcp/asset/3ec89038-5d3a-41d9-9801-d9b14030ccd0',
-  popupExternal: 'https://www.figma.com/api/mcp/asset/7de77547-669c-480b-9c4c-68a4373882d6',
-  popupSettings: 'https://www.figma.com/api/mcp/asset/f39d522f-4803-4ab7-9ce6-4ae584c2063f',
-  popupHelp: 'https://www.figma.com/api/mcp/asset/f44c1abf-7971-4d9e-9184-45f69416af03',
-  popupArrow: 'https://www.figma.com/api/mcp/asset/59724d5e-af0a-44d1-8a13-242f9e9af35c',
-  popupUser: 'https://www.figma.com/api/mcp/asset/d8467b2e-5d4e-434e-b59e-b64b2e165602',
+  logo: 'https://www.figma.com/api/mcp/asset/6d9a8907-bbcf-42ab-9567-36914f42618d',
+  logoPopup: 'https://www.figma.com/api/mcp/asset/c225ab9d-b68d-45f2-be7c-46d6a78ffab5',
+  logoLogin: 'https://www.figma.com/api/mcp/asset/ff3a2a9d-8fd7-4539-9866-8e3dc2da2028',
+  logoStandalone: 'https://www.figma.com/api/mcp/asset/c98f33f3-8645-432e-bcec-c0a1a4caf4cd',
+  iconArrowUp: 'https://www.figma.com/api/mcp/asset/8f433904-444e-46af-a904-12f2697daacb',
+  iconIn: 'https://www.figma.com/api/mcp/asset/c93a01a6-e053-4e70-955e-79eef8bf7733',
+  iconUpload: 'https://www.figma.com/api/mcp/asset/dfd212ad-beaa-41ad-97f1-75683acabd73',
+  iconCheck: 'https://www.figma.com/api/mcp/asset/3cf7eba7-a82b-4b2d-bdd9-41f3f58616d8',
+  iconSparkle: 'https://www.figma.com/api/mcp/asset/e65e9e8b-b0b5-4217-94f6-d16efc70ad6a',
+  iconUploadSmall: 'https://www.figma.com/api/mcp/asset/a3bb13c9-6a5f-458c-a4e3-b20097f71de3',
+  iconSparkleSmall: 'https://www.figma.com/api/mcp/asset/36d01714-994f-4403-8aeb-12e0ed22ea61',
 } as const;

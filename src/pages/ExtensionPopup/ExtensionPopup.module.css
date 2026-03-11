@@ -1,403 +1,275 @@
-/* Extension popup: 358px width, compact layout */
-.wrapper {
+.page {
   min-height: 100vh;
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 24px;
-  background: var(--color-bg-muted);
+  flex-direction: column;
 }
 
-.page {
-  width: 358px;
-  min-height: 480px;
-  max-height: 600px;
+.main {
+  flex: 1;
+  background: rgba(249, 250, 251, 0.3);
+}
+
+.hero {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 96px 24px 80px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 36px;
+  line-height: 40px;
+  letter-spacing: -0.53px;
+  margin-bottom: 24px;
+}
+
+.hero > p {
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: -0.44px;
+  color: var(--color-text-secondary);
+  max-width: 672px;
+  margin: 0 auto 64px;
+}
+
+.deviceWrap {
+  margin: 0 auto;
+  width: 448px;
+  border-radius: 48px;
+  background: #fff;
+  box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(243, 244, 246, 0.5);
+  position: relative;
+  padding: 32px;
+}
+
+.notch {
+  width: 134px;
+  height: 24px;
+  border-radius: 0 0 16px 16px;
+  border: 1px solid rgba(243, 244, 246, 0.5);
+  border-top: 0;
+  background: #f9fafb;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -1px;
+}
+
+.device {
   background: #f8f9fa;
   border: 1px solid var(--color-border);
-  border-radius: 12px;
-  box-shadow: var(--shadow-popup);
-  display: flex;
-  flex-direction: column;
-  font-size: 11px;
-  overflow: hidden;
+  width: 100%;
 }
 
-.header {
-  background: white;
+.popupHeader {
+  background: #fff;
   border-bottom: 1px solid var(--color-border);
-  padding: 20px;
-  flex-shrink: 0;
-}
-
-.headerRow {
+  padding: 21px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 43px;
 }
 
-.brand {
+.brandRow {
   display: flex;
   align-items: center;
   gap: 12px;
+  text-align: left;
 }
 
 .logo {
-  width: 36px;
-  height: 36px;
+  width: 42px;
+  height: 42px;
   border-radius: 14px;
-  object-fit: cover;
-  box-shadow: var(--shadow-sm);
 }
 
-.brandText h2 {
+.brandRow h2 {
   font-size: 18px;
-  font-weight: 700;
   line-height: 28px;
   letter-spacing: -0.89px;
-  color: var(--color-text);
 }
 
-.brandText p {
+.brandRow p {
   font-size: 10px;
-  font-weight: 500;
   line-height: 15px;
-  letter-spacing: 0.12px;
   color: var(--color-text-muted);
 }
 
-.statusBadge {
+.running {
+  height: 28px;
+  border-radius: 9999px;
+  border: 1px solid var(--color-accent-green-border);
+  background: var(--color-accent-green-bg);
+  color: var(--color-accent-green-dark);
+  padding: 0 10px;
+  font-size: 11px;
+  font-weight: 600;
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  height: 26px;
-  padding: 0 10px;
-  background: var(--color-accent-green-bg);
-  border: 1px solid var(--color-accent-green-border);
-  border-radius: var(--radius-full);
 }
 
-.statusDot {
+.running span {
   width: 6px;
   height: 6px;
-  border-radius: var(--radius-full);
+  border-radius: 9999px;
   background: var(--color-accent-green);
-  opacity: 0.98;
 }
 
-.statusText {
-  font-size: 11px;
-  font-weight: 600;
-  line-height: 16.5px;
-  letter-spacing: 0.06px;
-  color: var(--color-accent-green-dark);
-}
-
-.content {
-  flex: 1;
+.popupBody {
   padding: 16px;
-  padding-right: 31px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  overflow: auto;
-}
-
-.resumeCard {
-  background: white;
-  border: 1px solid var(--color-border);
-  border-radius: 20px;
-  box-shadow: var(--shadow-sm);
-  padding: 17px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 12px;
 }
 
-.resumeCardHeader {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 40px;
+.emptyCard {
+  border: 1px dashed var(--color-border-strong);
+  border-radius: 20px;
+  padding: 26px 16px;
+  text-align: center;
+  background: #fff;
 }
 
-.resumeCardBrand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.resumeIcon {
-  width: 40px;
-  height: 40px;
-  border-radius: 14px;
+.emptyIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 9999px;
   background: var(--color-bg-subtle);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.resumeIcon img {
-  width: 20px;
-  height: 20px;
-}
-
-.resumeTitle {
-  font-size: 13px;
-  font-weight: 700;
-  line-height: 19.5px;
-  letter-spacing: -0.08px;
-  color: var(--color-text);
-}
-
-.resumeDate {
-  font-size: 11px;
-  line-height: 16.5px;
-  letter-spacing: 0.06px;
-  color: var(--color-text-muted);
-}
-
-.coreTag {
-  padding: 2px 8px;
-  background: var(--color-accent-blue-bg);
-  border-radius: var(--radius-sm);
-  font-size: 10px;
-  font-weight: 700;
-  line-height: 15px;
-  letter-spacing: 0.12px;
-  color: var(--color-accent-blue);
-}
-
-.resumeCardBody {
-  border-top: 1px solid var(--color-bg-subtle);
-  padding-top: 12px;
+  margin: 0 auto 12px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px 0;
+  place-items: center;
 }
 
-.resumeField {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
+.emptyCard h3 {
+  font-size: 13px;
+  line-height: 19.5px;
+  margin-bottom: 4px;
 }
 
-.resumeFieldLabel {
-  font-size: 10px;
-  line-height: 15px;
-  letter-spacing: 0.12px;
-  color: var(--color-text-muted);
-}
-
-.resumeFieldValue {
+.emptyCard p {
   font-size: 11px;
-  font-weight: 500;
   line-height: 16.5px;
-  letter-spacing: 0.06px;
-  color: var(--color-text);
+  color: var(--color-text-muted);
+  margin-bottom: 12px;
 }
 
-.resumeFieldFull {
-  grid-column: 1 / -1;
-}
-
-.resumeFieldValueMuted {
+.emptyCard button {
+  height: 30px;
+  padding: 0 14px;
+  border-radius: 9999px;
+  background: var(--color-bg-muted);
+  font-size: 11px;
+  font-weight: 700;
   color: var(--color-text-muted-dark);
 }
 
-.formNotice {
+.notice {
+  height: 62px;
+  border: 1px solid var(--color-accent-indigo-border);
+  border-radius: 16px;
+  background: rgba(238, 242, 255, 0.3);
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 0 17px;
-  height: 59px;
-  background: rgba(238, 242, 255, 0.3);
-  border: 1px solid var(--color-accent-indigo-border);
-  border-radius: var(--radius-xl);
+  padding: 0 16px;
+  text-align: left;
 }
 
-.formNoticeIcon {
-  width: 32px;
-  height: 32px;
-  border-radius: var(--radius-full);
+.noticeIcon {
+  width: 34px;
+  height: 34px;
+  border-radius: 9999px;
   background: var(--color-accent-indigo-border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+  color: var(--color-accent-indigo);
+  display: grid;
+  place-items: center;
 }
 
-.formNoticeIcon img {
-  width: 16px;
-  height: 16px;
-}
-
-.formNoticeTitle {
+.notice strong {
   font-size: 12px;
-  font-weight: 700;
   line-height: 18px;
   color: #312c85;
 }
 
-.formNoticeSub {
+.notice p {
   font-size: 10px;
   line-height: 15px;
-  letter-spacing: 0.12px;
-  color: var(--color-purple-muted);
+  color: rgba(79, 57, 246, 0.7);
 }
 
-.actions {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.primaryBtn {
-  width: 100%;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  background: #1e293b;
-  color: white;
+.primaryAction {
+  height: 50px;
+  border-radius: 16px;
+  background: #d1d5dc;
+  color: #99a1af;
   font-size: 14px;
-  font-weight: 700;
   line-height: 21px;
-  letter-spacing: -0.15px;
-  border: none;
-  border-radius: var(--radius-xl);
-  box-shadow: 0 10px 15px 0 #e5e7eb, 0 4px 6px 0 #e5e7eb;
-  cursor: pointer;
+  font-weight: 700;
 }
 
-.primaryBtn:hover {
-  opacity: 0.92;
-}
-
-.primaryBtn img {
-  width: 18px;
-  height: 18px;
-}
-
-.secondaryRow {
+.rowActions {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
 }
 
-.secondaryBtn {
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  background: white;
+.rowActions button {
+  height: 46px;
+  border-radius: 14px;
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  background: #fff;
   font-size: 12px;
+  line-height: 18px;
   font-weight: 700;
   color: #364153;
-  cursor: pointer;
 }
 
-.secondaryBtn:hover {
-  background: var(--color-bg-subtle);
-}
-
-.secondaryBtn img {
-  width: 14px;
-  height: 14px;
-}
-
-.footer {
-  background: white;
+.popupFooter {
   border-top: 1px solid var(--color-border);
-  padding: 17px 16px;
-  flex-shrink: 0;
+  background: #fff;
+  padding: 16px;
 }
 
-.footerLinks {
+.links {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 0 4px;
-  margin-bottom: 16px;
-}
-
-.footerLinkGroup {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.footerLink {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
+  color: var(--color-text-secondary);
   font-size: 11px;
-  font-weight: 500;
-  line-height: 16.5px;
-  letter-spacing: 0.06px;
-  color: #6a7282;
+  margin-bottom: 12px;
 }
 
-.footerLink:hover {
-  color: var(--color-text);
-}
-
-.footerLink img {
-  width: 14px;
-  height: 14px;
-}
-
-.userBar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 12px;
-  height: 40px;
+.account {
+  height: 42px;
+  border-radius: 14px;
   background: var(--color-bg-subtle);
-  border-radius: var(--radius-lg);
-}
-
-.userInfo {
   display: flex;
   align-items: center;
-  gap: 8px;
-}
-
-.userAvatar {
-  width: 24px;
-  height: 24px;
-  border-radius: var(--radius-full);
-  border: 1px solid var(--color-border);
-  background: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.userAvatar img {
-  width: 12px;
-  height: 12px;
-}
-
-.userEmail {
+  padding: 0 12px;
   font-size: 11px;
-  font-weight: 500;
-  line-height: 16.5px;
-  letter-spacing: 0.06px;
   color: var(--color-text-muted-dark);
 }
 
-.vipBadge {
-  padding: 2px 6px;
-  background: var(--color-vip-bg);
-  border-radius: var(--radius-sm);
-  font-size: 10px;
-  font-weight: 700;
-  line-height: 15px;
-  letter-spacing: 0.12px;
-  color: var(--color-vip-warning);
+.sizeText {
+  margin-top: 36px;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.15px;
+}
+
+@media (max-width: 920px) {
+  .hero {
+    padding: 40px 16px;
+  }
+
+  .deviceWrap {
+    width: 100%;
+    max-width: 448px;
+    padding: 20px;
+  }
+
+  .brandRow h2 {
+    font-size: 16px;
+  }
 }

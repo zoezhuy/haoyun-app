@@ -1,7 +1,7 @@
 .header {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 40;
   background: rgba(255, 255, 255, 0.8);
   border-bottom: 1px solid var(--color-border);
   backdrop-filter: saturate(180%) blur(8px);
@@ -18,81 +18,107 @@
 }
 
 .brand {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 8px;
 }
 
 .logo {
-  width: 32px;
-  height: 32px;
-  border-radius: 10px;
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
   object-fit: cover;
 }
 
 .brandName {
-  font-weight: 700;
   font-size: 24px;
+  font-weight: 900;
   line-height: 32px;
-  letter-spacing: -0.53px;
-  color: var(--color-text);
+  letter-spacing: -1.13px;
 }
 
 .nav {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 8px;
 }
 
 .navLink,
 .navLinkActive {
-  font-size: var(--text-nav);
-  font-weight: 500;
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
   line-height: 20px;
   letter-spacing: -0.15px;
-  color: var(--color-text-secondary);
+  font-weight: 700;
+  color: var(--color-text-muted);
 }
 
 .navLinkActive {
   color: var(--color-text);
+  background: var(--color-bg-subtle);
 }
 
-.navLink:hover,
-.navLinkActive:hover {
+.navLink:hover {
   color: var(--color-text);
 }
 
 .actions {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 8px;
 }
 
 .loginLink {
-  font-size: var(--text-nav);
-  font-weight: 500;
+  height: 36px;
+  padding: 0 16px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.15px;
+  font-weight: 700;
   color: var(--color-text-secondary);
-  padding: 8px 16px;
-}
-
-.loginLink:hover {
-  color: var(--color-text);
 }
 
 .ctaButton {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   height: 40px;
   padding: 0 24px;
-  background: var(--color-primary);
-  color: white;
-  font-size: var(--text-body-sm);
-  font-weight: 500;
   border-radius: var(--radius-full);
-  box-shadow: var(--shadow-md);
+  background: var(--color-primary);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.15px;
+  font-weight: 700;
+  box-shadow: var(--shadow-lg);
 }
 
-.ctaButton:hover {
-  opacity: 0.92;
+@media (max-width: 920px) {
+  .container {
+    height: auto;
+    padding: 12px 16px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .brandName {
+    font-size: 28px;
+  }
+
+  .nav {
+    order: 3;
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 2px;
+  }
+
+  .actions {
+    margin-left: auto;
+  }
 }
