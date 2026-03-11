@@ -1,0 +1,213 @@
+.page {
+  min-height: 100vh;
+  background: var(--color-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 24px;
+}
+
+.backLink {
+  position: absolute;
+  left: 32px;
+  top: 32px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--text-body-sm);
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.15px;
+  color: var(--color-text-muted);
+}
+
+.backLink:hover {
+  color: var(--color-text);
+}
+
+.backLink svg {
+  width: 18px;
+  height: 18px;
+}
+
+.container {
+  width: 100%;
+  max-width: 448px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.logoWrap {
+  width: 80px;
+  height: 80px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+
+.logoWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.brandTitle {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: -0.35px;
+  color: var(--color-text);
+  text-align: center;
+}
+
+.brandSub {
+  font-size: var(--text-body);
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.31px;
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+.formCard {
+  background: white;
+  border-radius: 24px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.inputGroup {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  height: 58px;
+  padding: 16px 16px 16px 48px;
+  background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  font-size: var(--text-body);
+  line-height: normal;
+  letter-spacing: -0.31px;
+  color: var(--color-text);
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.input:focus {
+  border-color: var(--color-text-muted);
+  box-shadow: 0 0 0 2px rgba(16, 24, 40, 0.08);
+}
+
+.inputIcon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+  color: var(--color-text-muted);
+}
+
+.codeRow {
+  position: relative;
+}
+
+.getCodeBtn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 30px;
+  padding: 0 12px;
+  background: white;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-lg);
+  font-size: var(--text-caption);
+  font-weight: 700;
+  line-height: 16px;
+  color: var(--color-text-muted-dark);
+  cursor: pointer;
+}
+
+.getCodeBtn:hover {
+  background: var(--color-bg-subtle);
+}
+
+.extraLinks {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4px;
+}
+
+.extraLink {
+  font-size: var(--text-body-sm);
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.15px;
+  color: var(--color-text-secondary);
+}
+
+.extraLink:hover {
+  color: var(--color-text);
+}
+
+.submitBtn {
+  width: 100%;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--color-primary);
+  color: white;
+  font-size: var(--text-body);
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.31px;
+  border: none;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  cursor: pointer;
+}
+
+.submitBtn:hover {
+  opacity: 0.92;
+}
+
+.submitBtn img {
+  width: 18px;
+  height: 18px;
+}
+
+.legal {
+  font-size: var(--text-caption);
+  line-height: 19.5px;
+  letter-spacing: 0;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.legal a {
+  color: var(--color-text-muted-dark);
+}
+
+.legal a:hover {
+  text-decoration: underline;
+}

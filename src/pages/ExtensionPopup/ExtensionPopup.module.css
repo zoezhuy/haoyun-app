@@ -1,0 +1,403 @@
+/* Extension popup: 358px width, compact layout */
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 24px;
+  background: var(--color-bg-muted);
+}
+
+.page {
+  width: 358px;
+  min-height: 480px;
+  max-height: 600px;
+  background: #f8f9fa;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  box-shadow: var(--shadow-popup);
+  display: flex;
+  flex-direction: column;
+  font-size: 11px;
+  overflow: hidden;
+}
+
+.header {
+  background: white;
+  border-bottom: 1px solid var(--color-border);
+  padding: 20px;
+  flex-shrink: 0;
+}
+
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 43px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 14px;
+  object-fit: cover;
+  box-shadow: var(--shadow-sm);
+}
+
+.brandText h2 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: -0.89px;
+  color: var(--color-text);
+}
+
+.brandText p {
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: 0.12px;
+  color: var(--color-text-muted);
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 26px;
+  padding: 0 10px;
+  background: var(--color-accent-green-bg);
+  border: 1px solid var(--color-accent-green-border);
+  border-radius: var(--radius-full);
+}
+
+.statusDot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background: var(--color-accent-green);
+  opacity: 0.98;
+}
+
+.statusText {
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 16.5px;
+  letter-spacing: 0.06px;
+  color: var(--color-accent-green-dark);
+}
+
+.content {
+  flex: 1;
+  padding: 16px;
+  padding-right: 31px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow: auto;
+}
+
+.resumeCard {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  box-shadow: var(--shadow-sm);
+  padding: 17px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.resumeCardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+}
+
+.resumeCardBrand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.resumeIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
+  background: var(--color-bg-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.resumeIcon img {
+  width: 20px;
+  height: 20px;
+}
+
+.resumeTitle {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 19.5px;
+  letter-spacing: -0.08px;
+  color: var(--color-text);
+}
+
+.resumeDate {
+  font-size: 11px;
+  line-height: 16.5px;
+  letter-spacing: 0.06px;
+  color: var(--color-text-muted);
+}
+
+.coreTag {
+  padding: 2px 8px;
+  background: var(--color-accent-blue-bg);
+  border-radius: var(--radius-sm);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: 0.12px;
+  color: var(--color-accent-blue);
+}
+
+.resumeCardBody {
+  border-top: 1px solid var(--color-bg-subtle);
+  padding-top: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 0;
+}
+
+.resumeField {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.resumeFieldLabel {
+  font-size: 10px;
+  line-height: 15px;
+  letter-spacing: 0.12px;
+  color: var(--color-text-muted);
+}
+
+.resumeFieldValue {
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 16.5px;
+  letter-spacing: 0.06px;
+  color: var(--color-text);
+}
+
+.resumeFieldFull {
+  grid-column: 1 / -1;
+}
+
+.resumeFieldValueMuted {
+  color: var(--color-text-muted-dark);
+}
+
+.formNotice {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 17px;
+  height: 59px;
+  background: rgba(238, 242, 255, 0.3);
+  border: 1px solid var(--color-accent-indigo-border);
+  border-radius: var(--radius-xl);
+}
+
+.formNoticeIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  background: var(--color-accent-indigo-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.formNoticeIcon img {
+  width: 16px;
+  height: 16px;
+}
+
+.formNoticeTitle {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #312c85;
+}
+
+.formNoticeSub {
+  font-size: 10px;
+  line-height: 15px;
+  letter-spacing: 0.12px;
+  color: var(--color-purple-muted);
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.primaryBtn {
+  width: 100%;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #1e293b;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: -0.15px;
+  border: none;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 10px 15px 0 #e5e7eb, 0 4px 6px 0 #e5e7eb;
+  cursor: pointer;
+}
+
+.primaryBtn:hover {
+  opacity: 0.92;
+}
+
+.primaryBtn img {
+  width: 18px;
+  height: 18px;
+}
+
+.secondaryRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.secondaryBtn {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  font-size: 12px;
+  font-weight: 700;
+  color: #364153;
+  cursor: pointer;
+}
+
+.secondaryBtn:hover {
+  background: var(--color-bg-subtle);
+}
+
+.secondaryBtn img {
+  width: 14px;
+  height: 14px;
+}
+
+.footer {
+  background: white;
+  border-top: 1px solid var(--color-border);
+  padding: 17px 16px;
+  flex-shrink: 0;
+}
+
+.footerLinks {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4px;
+  margin-bottom: 16px;
+}
+
+.footerLinkGroup {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footerLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 16.5px;
+  letter-spacing: 0.06px;
+  color: #6a7282;
+}
+
+.footerLink:hover {
+  color: var(--color-text);
+}
+
+.footerLink img {
+  width: 14px;
+  height: 14px;
+}
+
+.userBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  height: 40px;
+  background: var(--color-bg-subtle);
+  border-radius: var(--radius-lg);
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.userAvatar {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border);
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.userAvatar img {
+  width: 12px;
+  height: 12px;
+}
+
+.userEmail {
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 16.5px;
+  letter-spacing: 0.06px;
+  color: var(--color-text-muted-dark);
+}
+
+.vipBadge {
+  padding: 2px 6px;
+  background: var(--color-vip-bg);
+  border-radius: var(--radius-sm);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: 0.12px;
+  color: var(--color-vip-warning);
+}

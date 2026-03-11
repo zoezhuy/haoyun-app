@@ -1,0 +1,98 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid var(--color-border);
+  backdrop-filter: saturate(180%) blur(8px);
+}
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  height: 80px;
+  padding: 0 var(--section-px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.brandName {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.53px;
+  color: var(--color-text);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.navLink,
+.navLinkActive {
+  font-size: var(--text-nav);
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.15px;
+  color: var(--color-text-secondary);
+}
+
+.navLinkActive {
+  color: var(--color-text);
+}
+
+.navLink:hover,
+.navLinkActive:hover {
+  color: var(--color-text);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.loginLink {
+  font-size: var(--text-nav);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  padding: 8px 16px;
+}
+
+.loginLink:hover {
+  color: var(--color-text);
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 0 24px;
+  background: var(--color-primary);
+  color: white;
+  font-size: var(--text-body-sm);
+  font-weight: 500;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-md);
+}
+
+.ctaButton:hover {
+  opacity: 0.92;
+}
