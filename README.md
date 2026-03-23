@@ -18,7 +18,7 @@ AI-Powered Resume Management & Auto-Fill Platform
 ![Auto Fill](./assets/autofill-demo.png)
 
 **插件视图 / Extension View**
-![Extension](./assets/extension view.png)
+![Extension](./assets/extension-view.png)
 
 ---
 
