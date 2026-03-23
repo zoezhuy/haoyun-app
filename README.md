@@ -1,73 +1,62 @@
-# React + TypeScript + Vite
+# 好运 AI（Haoyun AI）—— AI 驱动简历管理与自动填表平台
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+AI-Powered Resume Management & Auto-Fill Platform
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Project Overview 项目简介**
 
-## React Compiler
+好运 AI 是一个面向求职者的 AI 简历管理平台，与 haoyun-extension（Chrome 插件端）配合使用，构成完整的 AI 求职辅助产品闭环。
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Haoyun AI is an AI-powered resume management platform for job seekers, paired with the haoyun-extension (Chrome plugin) to form a complete AI job application workflow.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+**Product Value 产品价值**
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- 帮助求职者集中管理简历信息，避免在不同平台重复填写
+- 通过 LLM 字段智能匹配，自动识别表单字段并填入对应信息
+- 支持多语言（中 / 英）简历场景，适配国内外主流招聘平台
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Centralized resume management to eliminate repetitive form-filling across platforms
+- LLM-based intelligent field matching for automatic form detection and autofill
+- Bilingual (CN/EN) resume support for major job platforms (LinkedIn, Zhaopin, BOSS Zhipin)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+**Tech Stack 技术栈**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+React · TypeScript · Vite · LLM API · Prompt Engineering · Figma (UI Design)
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+**Product Structure 产品结构**
+
+haoyun-app（本仓库）= 前端管理平台 / Frontend management platform
+haoyun-extension = Chrome 插件端 / Chrome extension for autofill
+→ 两者配合构成完整 AI 求职辅助产品 / Together forming a complete AI job application tool
+
+---
+
+**My Role 我的角色**
+
+独立完成产品定义、UI 设计（Figma）与前端开发全流程
+Independently completed product definition, UI design (Figma), and full front-end development
+
+- 产品需求定义与用户流程设计 / Product requirements & user flow design
+- Figma UI 设计与前端实现 / Figma UI design & front-end implementation  
+- LLM API 集成与 Prompt Engineering / LLM API integration & Prompt Engineering
+- 基于 Vibe Coding（Codex）快速迭代 / Rapid iteration with Vibe Coding (Codex)
+
+---
+
+**Related Repository 相关仓库**
+
+Chrome Extension: https://github.com/zoezhuy/haoyun-extension
+
+---
+
+**Contact 联系方式**
+
+Email: zz3378@tc.columbia.edu
+GitHub: https://github.com/zoezhuy
