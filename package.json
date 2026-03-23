@@ -1,5 +1,6 @@
 {
   "name": "haoyun-app",
+"description": "AI-powered resume management and auto-fill platform built with React + TypeScript + LLM API",
   "private": true,
   "version": "0.0.0",
   "type": "module",
