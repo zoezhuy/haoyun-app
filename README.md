@@ -1,6 +1,13 @@
 # 好运 AI（Haoyun AI）—— AI 驱动简历管理与自动填表平台
 AI-Powered Resume Management & Auto-Fill Platform
+🔗 Product Prototype / 产品原型演示：[https://easel-cameo-93798642.figma.site](https://haoyun.figma.site/)
 
+> ⚠️ This is a UI prototype built with Figma Make, demonstrating the product vision,
+> user flow, and interface design. The actual AI autofill functionality is implemented
+> in the haoyun-extension repository.
+>
+> 注：此为 Figma Make 制作的 UI 交互原型，展示产品设计思路与用户流程。
+> 实际 AI 自动填写功能见 haoyun-extension 仓库。
 ---
 
 **Product Screenshots 产品截图**
